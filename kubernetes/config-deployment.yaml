@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: config
+  name: config
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: config
+  template:
+    metadata:
+      labels:
+        app: config
+    spec:
+      containers:
+      - image: vikramshinde/cloud-run-googlesheet
+        name: cloud-run-googlesheet
+        ports:
+        - containerPort: 8080
+        volumeMounts:
+        - name: google-cloud-key
+          mountPath: /var/secrets/google
+        env:
+        - name: GOOGLE_APPLICATION_CREDENTIALS
+          value: /var/secrets/google/key.json
+      volumes:
+      - name: google-cloud-key
+        secret:
+         secretName: googlesheet-key
