@@ -1,2 +1,9 @@
 /venv/
 .idea/
+terraform/.terraform
+terraform/terraform.tfstate*
+/terraform/terraform.tfstate
+/terraform/terraform.tfstate.backup
+/terraform/terraform.tfvars
+/terraform/.terraform/
+/terraform/terraform-278306-e0a9d84d9042.json

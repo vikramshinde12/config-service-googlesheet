@@ -1,0 +1,6 @@
+project_name = "project-foo-123456"
+region = "us-central1"
+zone = "us-central1-a"
+gcr_region = "us"
+service_name = "config-service"
+repository_name = "config-app"
