@@ -6,8 +6,9 @@
 - Google Cloud Container Registry
 - Google Cloud Run
 1. Create Project
-2. Create SA, Assign role of Editor and download key as terraform.json
-3. export GOOGLE_CLOUD_KEYFILE_JSON=terraform.json
+2. Create SA, Assign the roles: Editor, Security Admin, Service Usage Consumer, Source Repository Administrator 
+and download key as terraform.json
+3. export GOOGLE_CLOUD_KEYFILE_JSON=terraform-key.json
 ```
  git clone  https://github.com/vikramshinde12/config-service-googlesheet.git
  cd  config-service-googlesheet/terraform

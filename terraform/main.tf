@@ -118,10 +118,6 @@ resource "google_service_account" "sa" {
 data "google_project" "project" {
 }
 
-output "sa" {
-  value = "${data.google_project.project.number}@cloudbuild.gserviceaccount.com"
-}
-
 resource "google_project_iam_binding" "binding" {
   members = ["serviceAccount:${data.google_project.project.number}@cloudbuild.gserviceaccount.com"]
   role = "roles/run.admin"
